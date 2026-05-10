@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ricardo Martínez Domínguez - Agente de Seguros</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(rgba(196,0,0,0.05), rgba(196,0,0,0.05));
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: #c40000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero img {
+  width: 160px;
+  border-radius: 50%;
+  border: 4px solid #c40000;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  color: #c40000;
+  font-size: 24px;
+}
+
+.btn {
+  background: #c40000;
+  color: white;
+  padding: 14px 22px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background: #a00000;
+}
+
+/* CONTENEDOR */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* SECCIONES */
+.section {
+  background: rgba(196,0,0,0.05);
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #c40000;
+  margin-bottom: 10px;
+}
+
+/* DESPLEGABLE */
+details {
+  margin: 10px 0;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+  border-left: 4px solid #c40000;
+}
+
+summary {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* FORMULARIO */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer {
+  background: #c40000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>RICARDO MARTÍNEZ DOMÍNGUEZ</h1>
+  <p>AGENTE DE SEGUROS</p>
+</header>
+
+<section class="hero">
+  <img src="foto.jpg" alt="Ricardo">
+
+  <h2>Pago menos por tus seguros. Y mejor cubierto.</h2>
+  <p>Comparo entre compañías para darte la mejor opción sin que pierdas cobertura</p>
+
+  <a href="https://wa.me/34605125721" target="_blank">
+    <button class="btn">Hablar por WhatsApp</button>
+  </a>
+</section>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Quién soy</h2>
+    <p>
+    Soy especialista en optimización de seguros. Analizo lo que tienes y te propongo una alternativa mejor:
+    menos precio, mejor cobertura y sin complicaciones.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Servicios</h2>
+
+    <details>
+      <summary>Seguro de vida</summary>
+      <p>Protección real para tu familia al mejor precio.</p>
+    </details>
+
+    <details>
+      <summary>Seguro de salud</summary>
+      <p>Acceso rápido a médicos y especialistas sin esperas.</p>
+    </details>
+
+    <details>
+      <summary>Seguro de coche</summary>
+      <p>Busco entre compañías para darte la mejor opción.</p>
+    </details>
+
+    <details>
+      <summary>Seguro de hogar</summary>
+      <p>Cobertura completa para tu vivienda y tranquilidad total.</p>
+    </details>
+
+  </div>
+
+  <div class="section">
+    <h2>Solicita tu estudio gratuito</h2>
+
+    <form id="formSeguro">
+
+      <input type="text" id="nombre" placeholder="Nombre" required>
+      <input type="tel" id="telefono" placeholder="Teléfono" required>
+      <input type="email" id="email" placeholder="Email">
+
+      <select id="seguro">
+        <option value="">Tipo de seguro</option>
+        <option>Vida</option>
+        <option>Salud</option>
+        <option>Coche</option>
+        <option>Hogar</option>
+      </select>
+
+      <textarea id="mensaje" placeholder="Cuéntame tu caso"></textarea>
+
+      <button class="btn" type="submit">Enviar por WhatsApp</button>
+
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <p>© Ricardo Martínez - Seguros en [CIUDAD]</p>
+</footer>
+
+<a href="https://wa.me/34600000000" class="whatsapp-float" target="_blank">
+  WhatsApp
+</a>
+
+<script>
+document.getElementById("formSeguro").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  let nombre = document.getElementById("nombre").value;
+  let telefono = document.getElementById("telefono").value;
+  let email = document.getElementById("email").value;
+  let seguro = document.getElementById("seguro").value;
+  let mensaje = document.getElementById("mensaje").value;
+
+  let texto = `Hola, soy ${nombre}%0A
+Teléfono: ${telefono}%0A
+Email: ${email}%0A
+Seguro: ${seguro}%0A
+Mensaje: ${mensaje}`;
+
+  window.open(`https://wa.me/34600000000?text=${texto}`, "_blank");
+});
+</script>
+
+</body>
+</html>
