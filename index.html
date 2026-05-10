@@ -32,27 +32,43 @@ header p{
 
 .hero{
   text-align:center;
-  padding:45px 20px;
+  padding:45px 20px 25px;
 }
 
-.hero img{
-  width:175px;
-  height:175px;
+.hero img.foto-perfil{
+  width:240px;
+  height:340px;
   object-fit:cover;
-  border-radius:50%;
+  object-position:center top;
+  border-radius:50% / 35%;
   border:5px solid #b60000;
-  box-shadow:0 8px 20px rgba(0,0,0,.15);
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  background:white;
 }
 
 .hero h2{
   color:#b60000;
   font-size:30px;
   max-width:900px;
-  margin:25px auto 10px;
+  margin:28px auto 10px;
+  line-height:1.2;
 }
 
 .hero p{
   font-size:18px;
+}
+
+.logo-occident{
+  text-align:center;
+  margin:25px auto 10px;
+}
+
+.logo-occident img{
+  width:280px;
+  max-width:80%;
+  height:auto;
+  display:block;
+  margin:0 auto;
 }
 
 .container{
@@ -67,6 +83,11 @@ header p{
   padding:30px;
   margin-bottom:25px;
   box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.card h2{
+  text-align:center;
+  margin-top:0;
 }
 
 h2,h3{
@@ -109,23 +130,6 @@ textarea{
   background:#8f0000;
 }
 
-.logo-box{
-  margin-top:30px;
-  background:rgba(255,255,255,.7);
-  display:inline-block;
-  padding:18px 28px;
-  border-radius:14px;
-  box-shadow:0 5px 16px rgba(0,0,0,.08);
-}
-
-.logo-box img{
-  height:55px;
-  width:auto;
-  border:none;
-  border-radius:0;
-  box-shadow:none;
-}
-
 .testimonio{
   margin-bottom:25px;
   padding:20px;
@@ -137,6 +141,14 @@ textarea{
 .estrellas{
   color:#b60000;
   font-size:20px;
+}
+
+.campo-condicional{
+  background:rgba(196,0,0,.04);
+  padding:15px;
+  border-radius:12px;
+  margin:10px 0 15px;
+  border:1px solid rgba(182,0,0,.15);
 }
 
 .whatsapp-float{
@@ -163,7 +175,12 @@ footer{
 @media(max-width:600px){
   header h1{font-size:27px;}
   .hero h2{font-size:24px;}
+  .hero img.foto-perfil{
+    width:210px;
+    height:300px;
+  }
   .container{padding:15px;}
+  .logo-occident img{width:230px;}
 }
 </style>
 </head>
@@ -176,17 +193,12 @@ footer{
 </header>
 
 <section class="hero">
-  <img src="foto.jpg" alt="Ricardo Martínez Domínguez">
+  <img class="foto-perfil" src="foto.jpg" alt="Ricardo Martínez Domínguez">
 
   <h2>Revisamos tus seguros y los adaptamos en precio y coberturas a tus necesidades sin compromiso</h2>
   <p>Estudio personalizado, trato directo y respuesta rápida por WhatsApp.</p>
 
-  <a href="https://wa.me/34605125721" target="_blank">
-    <button class="btn">Hablar por WhatsApp</button>
-  </a>
-
-  <div class="logo-box">
-    <p style="font-weight:bold;color:#777;margin-top:0;">Trabajamos con compañías líderes</p>
+  <div class="logo-occident">
     <img src="occident.png" alt="Occident Seguros">
   </div>
 </section>
@@ -289,12 +301,24 @@ auto: personalesConCif + `
 <label>Fecha primera expedición del permiso de conducir</label><input name="Fecha primera expedición permiso" type="date">
 <label>Tipo del carnet</label>
 <select name="Tipo del carnet">
-<option>Seleccione...</option><option>B</option><option>A</option><option>A1</option><option>A2</option><option>C</option><option>D</option>
+<option>Seleccione...</option>
+<option>B</option>
+<option>A</option>
+<option>A1</option>
+<option>A2</option>
+<option>C</option>
+<option>D</option>
 </select>
+
 <label>¿El vehículo ya tiene seguro?</label>
-<select name="¿Ya tiene seguro?">
-<option>Selecciona una opción</option><option>Sí</option><option>No</option>
+<select name="¿El vehículo ya tiene seguro?" id="vehiculoTieneSeguro" onchange="mostrarDatosPolizaAuto()">
+<option value="">Selecciona una opción</option>
+<option value="Sí">Sí</option>
+<option value="No">No</option>
 </select>
+
+<div id="datosPolizaAuto"></div>
+
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
 
@@ -305,11 +329,17 @@ hogar: personalesBase + `
 <label>Tipo de vivienda</label><input name="Tipo de vivienda" placeholder="Piso, chalet...">
 <label>Uso del inmueble</label>
 <select name="Uso del inmueble">
-<option>Selecciona una opción</option><option>Vivienda habitual</option><option>Segunda vivienda</option><option>Alquiler</option><option>Local</option>
+<option>Selecciona una opción</option>
+<option>Vivienda habitual</option>
+<option>Segunda vivienda</option>
+<option>Alquiler</option>
+<option>Local</option>
 </select>
 <label>¿Ya tiene seguro contratado?</label>
 <select name="¿Ya tiene seguro contratado?">
-<option>Selecciona</option><option>Sí</option><option>No</option>
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
 </select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
@@ -319,11 +349,15 @@ vida: personalesBase + `
 <label>Capital que desea asegurar (€)</label><input name="Capital que desea asegurar" placeholder="100000">
 <label>Fumador</label>
 <select name="Fumador">
-<option>Selecciona</option><option>Sí</option><option>No</option>
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
 </select>
 <label>¿Ya tiene seguro contratado?</label>
 <select name="¿Ya tiene seguro contratado?">
-<option>Selecciona</option><option>Sí</option><option>No</option>
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
 </select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
@@ -332,11 +366,18 @@ salud: personalesConCif + `
 <h3>Datos para salud</h3>
 <label>Nº de personas a asegurar</label>
 <select name="Nº de personas a asegurar">
-<option>Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5 o más</option>
+<option>Selecciona</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5 o más</option>
 </select>
 <label>¿Ya tiene seguro contratado?</label>
 <select name="¿Ya tiene seguro contratado?">
-<option>Selecciona</option><option>Sí</option><option>No</option>
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
 </select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
@@ -347,16 +388,24 @@ negocio: personalesConCif + `
 <label>Dirección del negocio</label><input name="Dirección del negocio" placeholder="Calle, nº, piso...">
 <label>Propiedad del local</label>
 <select name="Propiedad del local">
-<option>Selecciona una opción</option><option>Propio</option><option>Alquilado</option>
+<option>Selecciona una opción</option>
+<option>Propio</option>
+<option>Alquilado</option>
 </select>
 <label>Uso del local</label>
 <select name="Uso del local">
-<option>Selecciona una opción</option><option>Comercial</option><option>Oficina</option><option>Almacén</option><option>Industrial</option>
+<option>Selecciona una opción</option>
+<option>Comercial</option>
+<option>Oficina</option>
+<option>Almacén</option>
+<option>Industrial</option>
 </select>
 <label>Valor aproximado del contenido (€)</label><input name="Valor aproximado del contenido" placeholder="Ej. 15000">
 <label>¿Ya tiene seguro contratado?</label>
 <select name="¿Ya tiene seguro contratado?">
-<option>Selecciona</option><option>Sí</option><option>No</option>
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
 </select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
@@ -365,13 +414,22 @@ inversiones: personalesBase + `
 <h3>Datos sobre inversiones</h3>
 <label>¿Qué tipo de inversión te interesa?</label>
 <select name="Tipo de inversión">
-<option>Selecciona una opción</option><option>Ahorro periódico</option><option>Inversión a largo plazo</option><option>Plan de jubilación</option><option>No lo sé, quiero asesoramiento</option>
+<option>Selecciona una opción</option>
+<option>Ahorro periódico</option>
+<option>Inversión a largo plazo</option>
+<option>Plan de jubilación</option>
+<option>No lo sé, quiero asesoramiento</option>
 </select>
 <label>Capital aproximado que deseas invertir al mes (€)</label><input name="Capital mensual" placeholder="Ej: 10000">
 <label>Horizonte temporal años</label><input name="Horizonte temporal" placeholder="Ej: 10">
 <label>Objetivo del Ahorro</label>
 <select name="Objetivo del ahorro">
-<option>Selecciona una opción</option><option>Jubilación</option><option>Comprar vivienda</option><option>Crear patrimonio</option><option>Estudios hijos</option><option>Otro</option>
+<option>Selecciona una opción</option>
+<option>Jubilación</option>
+<option>Comprar vivienda</option>
+<option>Crear patrimonio</option>
+<option>Estudios hijos</option>
+<option>Otro</option>
 </select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
@@ -386,6 +444,25 @@ otros: personalesBase + `
 function mostrarFormulario(){
   const tipo = document.getElementById("tipoSeguro").value;
   document.getElementById("camposFormulario").innerHTML = formularios[tipo] || "";
+}
+
+function mostrarDatosPolizaAuto(){
+  const valor = document.getElementById("vehiculoTieneSeguro").value;
+  const contenedor = document.getElementById("datosPolizaAuto");
+
+  if(valor === "Sí"){
+    contenedor.innerHTML = `
+      <div class="campo-condicional">
+        <label>Compañía actual</label>
+        <input name="Compañía actual" placeholder="Ej: Occident, Mapfre, AXA...">
+
+        <label>Número de póliza</label>
+        <input name="Número de póliza" placeholder="Ej: 123456789">
+      </div>
+    `;
+  } else {
+    contenedor.innerHTML = "";
+  }
 }
 
 function enviarWhatsApp(event){
