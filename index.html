@@ -5,129 +5,84 @@
 <title>Ricardo Martínez Domínguez - Agente de Seguros</title>
 
 <style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: linear-gradient(rgba(196,0,0,0.05), rgba(196,0,0,0.05));
-  color: #333;
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,rgba(196,0,0,.08),rgba(255,255,255,.95));
+  color:#2b2b2b;
 }
-
-/* HEADER */
-header {
-  background: #c40000;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
+header{
+  background:#b60000;
+  color:white;
+  text-align:center;
+  padding:45px 20px;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 32px;
+header h1{margin:0;font-size:34px;}
+header p{letter-spacing:2px;margin-top:8px;}
+.hero{
+  text-align:center;
+  padding:45px 20px;
 }
-
-header p {
-  margin-top: 5px;
-  font-size: 16px;
-  letter-spacing: 1px;
+.hero img{
+  width:170px;
+  height:170px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid #b60000;
 }
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 50px 20px;
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:25px;
 }
-
-.hero img {
-  width: 160px;
-  border-radius: 50%;
-  border: 4px solid #c40000;
-  margin-bottom: 20px;
+.card{
+  background:rgba(255,255,255,.82);
+  border-radius:18px;
+  padding:28px;
+  margin-bottom:25px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
-
-.hero h2 {
-  color: #c40000;
-  font-size: 24px;
+h2,h3{color:#b60000;}
+label{font-weight:bold;margin-top:12px;display:block;}
+input,select,textarea{
+  width:100%;
+  padding:13px;
+  margin-top:6px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:15px;
+  box-sizing:border-box;
 }
-
-.btn {
-  background: #c40000;
-  color: white;
-  padding: 14px 22px;
-  border: none;
-  cursor: pointer;
-  margin-top: 15px;
-  border-radius: 5px;
-  font-size: 16px;
+textarea{min-height:110px;}
+.btn{
+  background:#b60000;
+  color:white;
+  border:none;
+  padding:15px 22px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:bold;
 }
-
-.btn:hover {
-  background: #a00000;
+.btn:hover{background:#8f0000;}
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  padding:14px 20px;
+  border-radius:30px;
+  font-weight:bold;
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
 }
-
-/* CONTENEDOR */
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* SECCIONES */
-.section {
-  background: rgba(196,0,0,0.05);
-  padding: 25px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
-
-h2 {
-  color: #c40000;
-  margin-bottom: 10px;
-}
-
-/* DESPLEGABLE */
-details {
-  margin: 10px 0;
-  background: white;
-  border-radius: 5px;
-  padding: 10px;
-  border-left: 4px solid #c40000;
-}
-
-summary {
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* FORMULARIO */
-input, select, textarea {
-  width: 100%;
-  padding: 12px;
-  margin: 6px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-/* WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-footer {
-  background: #c40000;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
+footer{
+  background:#b60000;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
@@ -140,103 +95,208 @@ footer {
 </header>
 
 <section class="hero">
-  <img src="foto.jpg" alt="Ricardo">
-
-  <h2>Pago menos por tus seguros. Y mejor cubierto.</h2>
-  <p>Comparo entre compañías para darte la mejor opción sin que pierdas cobertura</p>
-
-  <a href="https://wa.me/34605125721" target="_blank">
-    <button class="btn">Hablar por WhatsApp</button>
-  </a>
+  <img src="foto.jpg" alt="Ricardo Martínez Domínguez">
+  <h2>Te ayudo a encontrar el seguro que realmente necesitas</h2>
+  <p>Estudio personalizado, trato directo y respuesta rápida por WhatsApp.</p>
 </section>
 
 <div class="container">
 
-  <div class="section">
+  <div class="card">
     <h2>Quién soy</h2>
     <p>
-    Soy especialista en optimización de seguros. Analizo lo que tienes y te propongo una alternativa mejor:
-    menos precio, mejor cobertura y sin complicaciones.
+      Soy Ricardo Martínez Domínguez, agente de seguros. Mi trabajo es analizar tu situación,
+      comparar opciones y ayudarte a encontrar una solución que encaje contigo, sin pagar de más
+      y sin quedarte corto de cobertura.
     </p>
   </div>
 
-  <div class="section">
-    <h2>Servicios</h2>
-
-    <details>
-      <summary>Seguro de vida</summary>
-      <p>Protección real para tu familia al mejor precio.</p>
-    </details>
-
-    <details>
-      <summary>Seguro de salud</summary>
-      <p>Acceso rápido a médicos y especialistas sin esperas.</p>
-    </details>
-
-    <details>
-      <summary>Seguro de coche</summary>
-      <p>Busco entre compañías para darte la mejor opción.</p>
-    </details>
-
-    <details>
-      <summary>Seguro de hogar</summary>
-      <p>Cobertura completa para tu vivienda y tranquilidad total.</p>
-    </details>
-
-  </div>
-
-  <div class="section">
+  <div class="card">
     <h2>Solicita tu estudio gratuito</h2>
 
-    <form id="formSeguro">
+    <label>¿Qué seguro necesitas?</label>
+    <select id="tipoSeguro" onchange="mostrarFormulario()">
+      <option value="">Seleccione...</option>
+      <option value="auto">Seguro de Auto</option>
+      <option value="hogar">Seguro de Hogar</option>
+      <option value="vida">Seguro de Vida</option>
+      <option value="salud">Seguro de Salud</option>
+      <option value="negocio">Seguro de Negocio</option>
+      <option value="inversiones">Inversiones</option>
+      <option value="otros">Otros</option>
+    </select>
 
-      <input type="text" id="nombre" placeholder="Nombre" required>
-      <input type="tel" id="telefono" placeholder="Teléfono" required>
-      <input type="email" id="email" placeholder="Email">
-
-      <select id="seguro">
-        <option value="">Tipo de seguro</option>
-        <option>Vida</option>
-        <option>Salud</option>
-        <option>Coche</option>
-        <option>Hogar</option>
-      </select>
-
-      <textarea id="mensaje" placeholder="Cuéntame tu caso"></textarea>
-
+    <form id="formSeguro" onsubmit="enviarWhatsApp(event)">
+      <div id="camposFormulario"></div>
       <button class="btn" type="submit">Enviar por WhatsApp</button>
-
     </form>
   </div>
 
 </div>
 
 <footer>
-  <p>© Ricardo Martínez - Seguros en [CIUDAD]</p>
+  <p>© Ricardo Martínez Domínguez - Agente de Seguros</p>
 </footer>
 
-<a href="https://wa.me/34600000000" class="whatsapp-float" target="_blank">
-  WhatsApp
-</a>
+<a class="whatsapp-float" href="https://wa.me/34600000000" target="_blank">WhatsApp</a>
 
 <script>
-document.getElementById("formSeguro").addEventListener("submit", function(e) {
-  e.preventDefault();
+const WHATSAPP = "34600000000";
 
-  let nombre = document.getElementById("nombre").value;
-  let telefono = document.getElementById("telefono").value;
-  let email = document.getElementById("email").value;
-  let seguro = document.getElementById("seguro").value;
-  let mensaje = document.getElementById("mensaje").value;
+const personalesBase = `
+<h3>Datos personales</h3>
+<label>Nombre y apellidos</label><input name="Nombre y apellidos" required>
+<label>Email</label><input name="Email" type="email" required>
+<label>Teléfono</label><input name="Teléfono" placeholder="+34 000 111 222" required>
+<label>DNI/NIE</label><input name="DNI/NIE" placeholder="12345678Z / X1234567L">
+<label>Fecha de nacimiento</label><input name="Fecha de nacimiento" type="date">
+<label>Código postal</label><input name="Código postal" placeholder="28001">
+<label>Población</label><input name="Población" placeholder="Madrid">
+`;
 
-  let texto = `Hola, soy ${nombre}%0A
-Teléfono: ${telefono}%0A
-Email: ${email}%0A
-Seguro: ${seguro}%0A
-Mensaje: ${mensaje}`;
+const personalesConCif = `
+<h3>Datos personales</h3>
+<label>Nombre y apellidos</label><input name="Nombre y apellidos" required>
+<label>Email</label><input name="Email" type="email" required>
+<label>Teléfono</label><input name="Teléfono" placeholder="+34 000 111 222" required>
+<label>DNI/NIE</label><input name="DNI/NIE" placeholder="12345678Z / X1234567L">
+<label>CIF solo para empresas</label><input name="CIF" placeholder="B12345678">
+<label>Fecha de nacimiento</label><input name="Fecha de nacimiento" type="date">
+<label>Código postal</label><input name="Código postal" placeholder="28001">
+<label>Población</label><input name="Población" placeholder="Madrid">
+`;
 
-  window.open(`https://wa.me/34600000000?text=${texto}`, "_blank");
-});
+const formularios = {
+auto: personalesConCif + `
+<h3>Datos del Seguro de Auto</h3>
+<label>Matrícula del vehículo</label><input name="Matrícula del vehículo" placeholder="1234 ABC">
+<label>Marca y modelo del vehículo</label><input name="Marca y modelo del vehículo" placeholder="Ej: Peugeot 308">
+<label>DNI del conductor habitual</label><input name="DNI conductor habitual" placeholder="12345678A">
+<label>Fecha de nacimiento del conductor habitual</label><input name="Fecha nacimiento conductor habitual" type="date">
+<label>Fecha primera expedición del permiso de conducir</label><input name="Fecha primera expedición permiso" type="date">
+<label>Tipo del carnet</label>
+<select name="Tipo del carnet">
+<option>Seleccione...</option><option>B</option><option>A</option><option>A1</option><option>A2</option><option>C</option><option>D</option>
+</select>
+<label>¿El vehículo ya tiene seguro?</label>
+<select name="¿Ya tiene seguro?">
+<option>Selecciona una opción</option><option>Sí</option><option>No</option>
+</select>
+<label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
+`,
+
+hogar: personalesBase + `
+<h3>Datos de la vivienda</h3>
+<label>Dirección completa</label><input name="Dirección completa" placeholder="Calle, nº, piso...">
+<label>Código Postal de la vivienda</label><input name="Código Postal vivienda" placeholder="28001">
+<label>Tipo de vivienda</label><input name="Tipo de vivienda" placeholder="Piso, chalet...">
+<label>Uso del inmueble</label>
+<select name="Uso del inmueble">
+<option>Selecciona una opción</option><option>Vivienda habitual</option><option>Segunda vivienda</option><option>Alquiler</option><option>Local</option>
+</select>
+<label>¿Ya tiene seguro contratado?</label>
+<select name="¿Ya tiene seguro contratado?">
+<option>Selecciona</option><option>Sí</option><option>No</option>
+</select>
+<label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
+`,
+
+vida: personalesBase + `
+<h3>Datos para vida</h3>
+<label>Capital que desea asegurar (€)</label><input name="Capital que desea asegurar" placeholder="100000">
+<label>Fumador</label>
+<select name="Fumador">
+<option>Selecciona</option><option>Sí</option><option>No</option>
+</select>
+<label>¿Ya tiene seguro contratado?</label>
+<select name="¿Ya tiene seguro contratado?">
+<option>Selecciona</option><option>Sí</option><option>No</option>
+</select>
+<label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
+`,
+
+salud: personalesConCif + `
+<h3>Datos para salud</h3>
+<label>Nº de personas a asegurar</label>
+<select name="Nº de personas a asegurar">
+<option>Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5 o más</option>
+</select>
+<label>¿Ya tiene seguro contratado?</label>
+<select name="¿Ya tiene seguro contratado?">
+<option>Selecciona</option><option>Sí</option><option>No</option>
+</select>
+<label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
+`,
+
+negocio: personalesConCif + `
+<h3>Datos de la empresa</h3>
+<label>Actividad del negocio</label><input name="Actividad del negocio" placeholder="Peluquería, clínica, carpintería...">
+<label>Dirección del negocio</label><input name="Dirección del negocio" placeholder="Calle, nº, piso...">
+<label>Propiedad del local</label>
+<select name="Propiedad del local">
+<option>Selecciona una opción</option><option>Propio</option><option>Alquilado</option>
+</select>
+<label>Uso del local</label>
+<select name="Uso del local">
+<option>Selecciona una opción</option><option>Comercial</option><option>Oficina</option><option>Almacén</option><option>Industrial</option>
+</select>
+<label>Valor aproximado del contenido (€)</label><input name="Valor aproximado del contenido" placeholder="Ej. 15000">
+<label>¿Ya tiene seguro contratado?</label>
+<select name="¿Ya tiene seguro contratado?">
+<option>Selecciona</option><option>Sí</option><option>No</option>
+</select>
+<label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
+`,
+
+inversiones: personalesBase + `
+<h3>Datos sobre inversiones</h3>
+<label>¿Qué tipo de inversión te interesa?</label>
+<select name="Tipo de inversión">
+<option>Selecciona una opción</option><option>Ahorro periódico</option><option>Inversión a largo plazo</option><option>Plan de jubilación</option><option>No lo sé, quiero asesoramiento</option>
+</select>
+<label>Capital aproximado que deseas invertir al mes (€)</label><input name="Capital mensual" placeholder="Ej: 10000">
+<label>Horizonte temporal años</label><input name="Horizonte temporal" placeholder="Ej: 10">
+<label>Objetivo del Ahorro</label>
+<select name="Objetivo del ahorro">
+<option>Selecciona una opción</option><option>Jubilación</option><option>Comprar vivienda</option><option>Crear patrimonio</option><option>Estudios hijos</option><option>Otro</option>
+</select>
+<label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
+`,
+
+otros: personalesBase + `
+<h3>Detalles del seguro</h3>
+<label>Describe brevemente</label><input name="Describe brevemente" placeholder="Seguro de viaje, mascota, etc.">
+<label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
+`
+};
+
+function mostrarFormulario(){
+  const tipo = document.getElementById("tipoSeguro").value;
+  document.getElementById("camposFormulario").innerHTML = formularios[tipo] || "";
+}
+
+function enviarWhatsApp(event){
+  event.preventDefault();
+
+  const tipo = document.getElementById("tipoSeguro").value;
+  if(!tipo){
+    alert("Selecciona primero un tipo de seguro.");
+    return;
+  }
+
+  const campos = document.querySelectorAll("#formSeguro input, #formSeguro select, #formSeguro textarea");
+
+  let texto = "Hola Ricardo, quiero solicitar información.%0A";
+  texto += "Tipo de solicitud: " + document.getElementById("tipoSeguro").selectedOptions[0].text + "%0A%0A";
+
+  campos.forEach(campo => {
+    if(campo.name && campo.value){
+      texto += campo.name + ": " + campo.value + "%0A";
+    }
+  });
+
+  window.open("https://wa.me/" + WHATSAPP + "?text=" + texto, "_blank");
+}
 </script>
 
 </body>
