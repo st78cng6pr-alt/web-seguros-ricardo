@@ -5,13 +5,13 @@
 <title>Ricardo Martínez Domínguez - Agente de Seguros</title>
 
 <style>
+html{scroll-behavior:smooth;}
 body{
   margin:0;
   font-family:Arial,sans-serif;
   background:linear-gradient(135deg,rgba(196,0,0,.10),rgba(255,255,255,.92));
   color:#2b2b2b;
 }
-html{scroll-behavior:smooth;}
 header{
   background:#b60000;
   color:white;
@@ -107,11 +107,12 @@ footer{background:#b60000;color:white;text-align:center;padding:22px;}
 
 <section class="hero">
   <img class="foto-perfil" src="foto.jpg" alt="Ricardo Martínez Domínguez">
+
   <h2>Revisamos tus seguros y los adaptamos en precio y coberturas a tus necesidades sin compromiso</h2>
   <p>Estudio personalizado, trato directo y respuesta rápida por WhatsApp.</p>
 
   <div style="margin-top:20px;">
-    <a href="#formulario-rapido"><button class="btn">Pedir revisión gratuita</button></a>
+    <a href="#formulario-cotizacion"><button class="btn">Enviar datos para cotizar seguro</button></a>
     <a class="btn-call" href="tel:+34605125721">Llamar ahora</a>
   </div>
 
@@ -121,40 +122,6 @@ footer{background:#b60000;color:white;text-align:center;padding:22px;}
 </section>
 
 <div class="container">
-
-  <div class="card" id="formulario-rapido">
-    <h2>Consulta rápida</h2>
-    <p style="text-align:center;">Déjame tus datos básicos y te contacto por WhatsApp.</p>
-
-    <form id="formRapido" onsubmit="enviarWhatsAppRapido(event)">
-      <label>Nombre y apellidos</label>
-      <input name="Nombre y apellidos" required>
-
-      <label>Teléfono</label>
-      <input name="Teléfono" placeholder="+34 000 111 222" required>
-
-      <label>Tipo de seguro</label>
-      <select name="Tipo de seguro" required>
-        <option value="">Seleccione...</option>
-        <option>Auto</option>
-        <option>Hogar</option>
-        <option>Vida</option>
-        <option>Salud</option>
-        <option>Negocio</option>
-        <option>Inversiones</option>
-        <option>Otro</option>
-      </select>
-
-      <div class="legal">
-        <label>
-          <input type="checkbox" id="legalRapido" required>
-          <span>Acepto la política de privacidad y autorizo el uso de mis datos para recibir una propuesta personalizada.</span>
-        </label>
-      </div>
-
-      <button class="btn" type="submit">Enviar consulta rápida</button>
-    </form>
-  </div>
 
   <div class="card">
     <h2>Quién soy</h2>
@@ -167,20 +134,32 @@ footer{background:#b60000;color:white;text-align:center;padding:22px;}
 
   <div class="card">
     <h2>Cómo trabajo</h2>
-    <div class="testimonio"><strong>1. Me envías tus datos</strong><p>Rellenas el formulario con la información básica sobre el seguro que necesitas.</p></div>
-    <div class="testimonio"><strong>2. Analizo tu situación</strong><p>Reviso tus necesidades, coberturas actuales y posibles mejoras.</p></div>
-    <div class="testimonio"><strong>3. Comparo opciones</strong><p>Busco alternativas para encontrar una solución equilibrada en precio y cobertura.</p></div>
-    <div class="testimonio"><strong>4. Recibes una propuesta personalizada</strong><p>Te contacto directamente por WhatsApp con una propuesta adaptada y sin compromiso.</p></div>
-    <div style="text-align:center;margin-top:30px;">
-      <a href="#formulario-cotizacion"><button class="btn">Enviar datos para cotizar seguro</button></a>
-    </div>
-  </div>
 
-  <div class="card">
-    <h2>Opiniones de clientes</h2>
-    <div class="testimonio"><div class="estrellas">★★★★★</div><p>“Me revisó todos los seguros y terminé pagando menos teniendo mejores coberturas.”</p><strong>— Javier M.</strong></div>
-    <div class="testimonio"><div class="estrellas">★★★★★</div><p>“Atención rápida, clara y por WhatsApp. Muy cómodo y sin vueltas.”</p><strong>— Laura G.</strong></div>
-    <div class="testimonio"><div class="estrellas">★★★★★</div><p>“Me explicó todo sin prisas y encontré un seguro mucho más adaptado a mi situación.”</p><strong>— Carlos R.</strong></div>
+    <div class="testimonio">
+      <strong>1. Me envías tus datos</strong>
+      <p>Rellenas el formulario con la información necesaria para poder estudiar tu caso correctamente.</p>
+    </div>
+
+    <div class="testimonio">
+      <strong>2. Analizo tu situación</strong>
+      <p>Reviso tus necesidades, coberturas actuales y posibles mejoras.</p>
+    </div>
+
+    <div class="testimonio">
+      <strong>3. Comparo opciones</strong>
+      <p>Busco alternativas para encontrar una solución equilibrada en precio y cobertura.</p>
+    </div>
+
+    <div class="testimonio">
+      <strong>4. Recibes una propuesta personalizada</strong>
+      <p>Te contacto directamente por WhatsApp con una propuesta adaptada y sin compromiso.</p>
+    </div>
+
+    <div style="text-align:center;margin-top:30px;">
+      <a href="#formulario-cotizacion">
+        <button class="btn">Enviar datos para cotizar seguro</button>
+      </a>
+    </div>
   </div>
 
   <div class="card" id="formulario-cotizacion">
@@ -210,6 +189,28 @@ footer{background:#b60000;color:white;text-align:center;padding:22px;}
 
       <button class="btn" type="submit">Enviar por WhatsApp</button>
     </form>
+  </div>
+
+  <div class="card">
+    <h2>Opiniones de clientes</h2>
+
+    <div class="testimonio">
+      <div class="estrellas">★★★★★</div>
+      <p>“Me revisó todos los seguros y terminé pagando menos teniendo mejores coberturas.”</p>
+      <strong>— Javier M.</strong>
+    </div>
+
+    <div class="testimonio">
+      <div class="estrellas">★★★★★</div>
+      <p>“Atención rápida, clara y por WhatsApp. Muy cómodo y sin vueltas.”</p>
+      <strong>— Laura G.</strong>
+    </div>
+
+    <div class="testimonio">
+      <div class="estrellas">★★★★★</div>
+      <p>“Me explicó todo sin prisas y encontré un seguro mucho más adaptado a mi situación.”</p>
+      <strong>— Carlos R.</strong>
+    </div>
   </div>
 
 </div>
@@ -255,59 +256,140 @@ auto: personalesConCif + `
 <label>Fecha de nacimiento del conductor habitual</label><input name="Fecha nacimiento conductor habitual" type="date">
 <label>Fecha primera expedición del permiso de conducir</label><input name="Fecha primera expedición permiso" type="date">
 <label>Tipo del carnet</label>
-<select name="Tipo del carnet"><option>Seleccione...</option><option>B</option><option>A</option><option>A1</option><option>A2</option><option>C</option><option>D</option></select>
+<select name="Tipo del carnet">
+<option>Seleccione...</option>
+<option>B</option>
+<option>A</option>
+<option>A1</option>
+<option>A2</option>
+<option>C</option>
+<option>D</option>
+</select>
+
 <label>¿El vehículo ya tiene seguro?</label>
 <select name="¿El vehículo ya tiene seguro?" id="vehiculoTieneSeguro" onchange="mostrarDatosPolizaAuto()">
-<option value="">Selecciona una opción</option><option value="Sí">Sí</option><option value="No">No</option>
+<option value="">Selecciona una opción</option>
+<option value="Sí">Sí</option>
+<option value="No">No</option>
 </select>
+
 <div id="datosPolizaAuto"></div>
+
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
+
 hogar: personalesBase + `
 <h3>Datos de la vivienda</h3>
 <label>Dirección completa</label><input name="Dirección completa" placeholder="Calle, nº, piso...">
 <label>Código Postal de la vivienda</label><input name="Código Postal vivienda" placeholder="28001">
 <label>Tipo de vivienda</label><input name="Tipo de vivienda" placeholder="Piso, chalet...">
 <label>Uso del inmueble</label>
-<select name="Uso del inmueble"><option>Selecciona una opción</option><option>Vivienda habitual</option><option>Segunda vivienda</option><option>Alquiler</option><option>Local</option></select>
+<select name="Uso del inmueble">
+<option>Selecciona una opción</option>
+<option>Vivienda habitual</option>
+<option>Segunda vivienda</option>
+<option>Alquiler</option>
+<option>Local</option>
+</select>
 <label>¿Ya tiene seguro contratado?</label>
-<select name="¿Ya tiene seguro contratado?"><option>Selecciona</option><option>Sí</option><option>No</option></select>
+<select name="¿Ya tiene seguro contratado?">
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
+</select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
+
 vida: personalesBase + `
 <h3>Datos para vida</h3>
 <label>Capital que desea asegurar (€)</label><input name="Capital que desea asegurar" placeholder="100000">
-<label>Fumador</label><select name="Fumador"><option>Selecciona</option><option>Sí</option><option>No</option></select>
-<label>¿Ya tiene seguro contratado?</label><select name="¿Ya tiene seguro contratado?"><option>Selecciona</option><option>Sí</option><option>No</option></select>
+<label>Fumador</label>
+<select name="Fumador">
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
+</select>
+<label>¿Ya tiene seguro contratado?</label>
+<select name="¿Ya tiene seguro contratado?">
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
+</select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
+
 salud: personalesConCif + `
 <h3>Datos para salud</h3>
 <label>Nº de personas a asegurar</label>
-<select name="Nº de personas a asegurar"><option>Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5 o más</option></select>
-<label>¿Ya tiene seguro contratado?</label><select name="¿Ya tiene seguro contratado?"><option>Selecciona</option><option>Sí</option><option>No</option></select>
+<select name="Nº de personas a asegurar">
+<option>Selecciona</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5 o más</option>
+</select>
+<label>¿Ya tiene seguro contratado?</label>
+<select name="¿Ya tiene seguro contratado?">
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
+</select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
+
 negocio: personalesConCif + `
 <h3>Datos de la empresa</h3>
 <label>Actividad del negocio</label><input name="Actividad del negocio" placeholder="Peluquería, clínica, carpintería...">
 <label>Dirección del negocio</label><input name="Dirección del negocio" placeholder="Calle, nº, piso...">
-<label>Propiedad del local</label><select name="Propiedad del local"><option>Selecciona una opción</option><option>Propio</option><option>Alquilado</option></select>
-<label>Uso del local</label><select name="Uso del local"><option>Selecciona una opción</option><option>Comercial</option><option>Oficina</option><option>Almacén</option><option>Industrial</option></select>
+<label>Propiedad del local</label>
+<select name="Propiedad del local">
+<option>Selecciona una opción</option>
+<option>Propio</option>
+<option>Alquilado</option>
+</select>
+<label>Uso del local</label>
+<select name="Uso del local">
+<option>Selecciona una opción</option>
+<option>Comercial</option>
+<option>Oficina</option>
+<option>Almacén</option>
+<option>Industrial</option>
+</select>
 <label>Valor aproximado del contenido (€)</label><input name="Valor aproximado del contenido" placeholder="Ej. 15000">
-<label>¿Ya tiene seguro contratado?</label><select name="¿Ya tiene seguro contratado?"><option>Selecciona</option><option>Sí</option><option>No</option></select>
+<label>¿Ya tiene seguro contratado?</label>
+<select name="¿Ya tiene seguro contratado?">
+<option>Selecciona</option>
+<option>Sí</option>
+<option>No</option>
+</select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
+
 inversiones: personalesBase + `
 <h3>Datos sobre inversiones</h3>
 <label>¿Qué tipo de inversión te interesa?</label>
-<select name="Tipo de inversión"><option>Selecciona una opción</option><option>Ahorro periódico</option><option>Inversión a largo plazo</option><option>Plan de jubilación</option><option>No lo sé, quiero asesoramiento</option></select>
+<select name="Tipo de inversión">
+<option>Selecciona una opción</option>
+<option>Ahorro periódico</option>
+<option>Inversión a largo plazo</option>
+<option>Plan de jubilación</option>
+<option>No lo sé, quiero asesoramiento</option>
+</select>
 <label>Capital aproximado que deseas invertir al mes (€)</label><input name="Capital mensual" placeholder="Ej: 10000">
 <label>Horizonte temporal años</label><input name="Horizonte temporal" placeholder="Ej: 10">
 <label>Objetivo del Ahorro</label>
-<select name="Objetivo del ahorro"><option>Selecciona una opción</option><option>Jubilación</option><option>Comprar vivienda</option><option>Crear patrimonio</option><option>Estudios hijos</option><option>Otro</option></select>
+<select name="Objetivo del ahorro">
+<option>Selecciona una opción</option>
+<option>Jubilación</option>
+<option>Comprar vivienda</option>
+<option>Crear patrimonio</option>
+<option>Estudios hijos</option>
+<option>Otro</option>
+</select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
+
 otros: personalesBase + `
 <h3>Detalles del seguro</h3>
 <label>Describe brevemente</label><input name="Describe brevemente" placeholder="Seguro de viaje, mascota, etc.">
@@ -323,11 +405,13 @@ function mostrarFormulario(){
 function mostrarDatosPolizaAuto(){
   const valor = document.getElementById("vehiculoTieneSeguro").value;
   const contenedor = document.getElementById("datosPolizaAuto");
+
   if(valor === "Sí"){
     contenedor.innerHTML = `
       <div class="campo-condicional">
         <label>Compañía actual</label>
         <input name="Compañía actual" placeholder="Ej: Occident, Mapfre, AXA...">
+
         <label>Número de póliza</label>
         <input name="Número de póliza" placeholder="Ej: 123456789">
       </div>
@@ -337,33 +421,27 @@ function mostrarDatosPolizaAuto(){
   }
 }
 
-function enviarWhatsAppRapido(event){
-  event.preventDefault();
-  const campos = document.querySelectorAll("#formRapido input, #formRapido select");
-  let texto = "Hola Ricardo, quiero una revisión rápida de seguro.%0A%0A";
-  campos.forEach(campo => {
-    if(campo.name && campo.value){
-      texto += campo.name + ": " + campo.value + "%0A";
-    }
-  });
-  window.open("https://wa.me/" + WHATSAPP + "?text=" + texto, "_blank");
-}
-
 function enviarWhatsApp(event){
   event.preventDefault();
+
   const tipo = document.getElementById("tipoSeguro").value;
+
   if(!tipo){
     alert("Selecciona primero un tipo de seguro.");
     return;
   }
+
   const campos = document.querySelectorAll("#formSeguro input, #formSeguro select, #formSeguro textarea");
+
   let texto = "Hola Ricardo, quiero solicitar información.%0A";
   texto += "Tipo de solicitud: " + document.getElementById("tipoSeguro").selectedOptions[0].text + "%0A%0A";
+
   campos.forEach(campo => {
     if(campo.name && campo.value && campo.type !== "checkbox"){
       texto += campo.name + ": " + campo.value + "%0A";
     }
   });
+
   window.open("https://wa.me/" + WHATSAPP + "?text=" + texto, "_blank");
 }
 </script>
