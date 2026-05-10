@@ -8,42 +8,77 @@
 body{
   margin:0;
   font-family:Arial,sans-serif;
-  background:linear-gradient(135deg,rgba(196,0,0,.08),rgba(255,255,255,.95));
+  background:linear-gradient(135deg,rgba(196,0,0,.10),rgba(255,255,255,.92));
   color:#2b2b2b;
 }
+
 header{
   background:#b60000;
   color:white;
   text-align:center;
   padding:45px 20px;
 }
-header h1{margin:0;font-size:34px;}
-header p{letter-spacing:2px;margin-top:8px;}
+
+header h1{
+  margin:0;
+  font-size:36px;
+}
+
+header p{
+  letter-spacing:2px;
+  margin-top:8px;
+  font-size:16px;
+}
+
 .hero{
   text-align:center;
   padding:45px 20px;
 }
+
 .hero img{
-  width:170px;
-  height:170px;
+  width:175px;
+  height:175px;
   object-fit:cover;
   border-radius:50%;
   border:5px solid #b60000;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
-.container{
+
+.hero h2{
+  color:#b60000;
+  font-size:30px;
   max-width:900px;
+  margin:25px auto 10px;
+}
+
+.hero p{
+  font-size:18px;
+}
+
+.container{
+  max-width:950px;
   margin:auto;
   padding:25px;
 }
+
 .card{
-  background:rgba(255,255,255,.82);
+  background:rgba(255,255,255,.86);
   border-radius:18px;
-  padding:28px;
+  padding:30px;
   margin-bottom:25px;
   box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
-h2,h3{color:#b60000;}
-label{font-weight:bold;margin-top:12px;display:block;}
+
+h2,h3{
+  color:#b60000;
+}
+
+label{
+  font-weight:bold;
+  margin-top:12px;
+  display:block;
+}
+
 input,select,textarea{
   width:100%;
   padding:13px;
@@ -54,7 +89,11 @@ input,select,textarea{
   font-size:15px;
   box-sizing:border-box;
 }
-textarea{min-height:110px;}
+
+textarea{
+  min-height:110px;
+}
+
 .btn{
   background:#b60000;
   color:white;
@@ -65,7 +104,41 @@ textarea{min-height:110px;}
   font-size:16px;
   font-weight:bold;
 }
-.btn:hover{background:#8f0000;}
+
+.btn:hover{
+  background:#8f0000;
+}
+
+.logo-box{
+  margin-top:30px;
+  background:rgba(255,255,255,.7);
+  display:inline-block;
+  padding:18px 28px;
+  border-radius:14px;
+  box-shadow:0 5px 16px rgba(0,0,0,.08);
+}
+
+.logo-box img{
+  height:55px;
+  width:auto;
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+}
+
+.testimonio{
+  margin-bottom:25px;
+  padding:20px;
+  background:rgba(196,0,0,.06);
+  border-left:5px solid #b60000;
+  border-radius:12px;
+}
+
+.estrellas{
+  color:#b60000;
+  font-size:20px;
+}
+
 .whatsapp-float{
   position:fixed;
   right:20px;
@@ -77,12 +150,20 @@ textarea{min-height:110px;}
   border-radius:30px;
   font-weight:bold;
   box-shadow:0 6px 16px rgba(0,0,0,.25);
+  z-index:999;
 }
+
 footer{
   background:#b60000;
   color:white;
   text-align:center;
-  padding:20px;
+  padding:22px;
+}
+
+@media(max-width:600px){
+  header h1{font-size:27px;}
+  .hero h2{font-size:24px;}
+  .container{padding:15px;}
 }
 </style>
 </head>
@@ -96,8 +177,18 @@ footer{
 
 <section class="hero">
   <img src="foto.jpg" alt="Ricardo Martínez Domínguez">
-  <h2>Te ayudo a encontrar el seguro que realmente necesitas</h2>
+
+  <h2>Revisamos tus seguros y los adaptamos en precio y coberturas a tus necesidades sin compromiso</h2>
   <p>Estudio personalizado, trato directo y respuesta rápida por WhatsApp.</p>
+
+  <a href="https://wa.me/34605125721" target="_blank">
+    <button class="btn">Hablar por WhatsApp</button>
+  </a>
+
+  <div class="logo-box">
+    <p style="font-weight:bold;color:#777;margin-top:0;">Trabajamos con compañías líderes</p>
+    <img src="occident.png" alt="Occident Seguros">
+  </div>
 </section>
 
 <div class="container">
@@ -105,10 +196,32 @@ footer{
   <div class="card">
     <h2>Quién soy</h2>
     <p>
-      Soy Ricardo Martínez Domínguez, agente de seguros. Mi trabajo es analizar tu situación,
-      comparar opciones y ayudarte a encontrar una solución que encaje contigo, sin pagar de más
-      y sin quedarte corto de cobertura.
+      Soy Ricardo Martínez Domínguez, agente de seguros. Mi trabajo es revisar tus pólizas,
+      analizar tus necesidades reales y ayudarte a encontrar una solución equilibrada en precio,
+      coberturas y tranquilidad.
     </p>
+  </div>
+
+  <div class="card">
+    <h2>Opiniones de clientes</h2>
+
+    <div class="testimonio">
+      <div class="estrellas">★★★★★</div>
+      <p>“Me revisó todos los seguros y terminé pagando menos teniendo mejores coberturas.”</p>
+      <strong>— Javier M.</strong>
+    </div>
+
+    <div class="testimonio">
+      <div class="estrellas">★★★★★</div>
+      <p>“Atención rápida, clara y por WhatsApp. Muy cómodo y sin vueltas.”</p>
+      <strong>— Laura G.</strong>
+    </div>
+
+    <div class="testimonio">
+      <div class="estrellas">★★★★★</div>
+      <p>“Me explicó todo sin prisas y encontré un seguro mucho más adaptado a mi situación.”</p>
+      <strong>— Carlos R.</strong>
+    </div>
   </div>
 
   <div class="card">
@@ -138,10 +251,10 @@ footer{
   <p>© Ricardo Martínez Domínguez - Agente de Seguros</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/34600000000" target="_blank">WhatsApp</a>
+<a class="whatsapp-float" href="https://wa.me/34605125721" target="_blank">WhatsApp</a>
 
 <script>
-const WHATSAPP = "34600000000";
+const WHATSAPP = "34605125721";
 
 const personalesBase = `
 <h3>Datos personales</h3>
@@ -279,6 +392,7 @@ function enviarWhatsApp(event){
   event.preventDefault();
 
   const tipo = document.getElementById("tipoSeguro").value;
+
   if(!tipo){
     alert("Selecciona primero un tipo de seguro.");
     return;
