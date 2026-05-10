@@ -2,68 +2,247 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Ricardo Martínez Domínguez - Agente de Seguros</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ricardo Martínez Domínguez | Agente de Seguros en Requena, Valencia</title>
+
+<meta name="description" content="Agente de seguros en Requena, Valencia. Revisamos tus seguros de auto, hogar, vida, salud, negocio e inversiones para adaptar precio y coberturas a tus necesidades.">
+<meta name="keywords" content="seguros Requena, seguros Valencia, agente de seguros Requena, seguro auto Requena, seguro hogar Requena, seguro vida Requena, seguro salud Requena, Ricardo Martínez Domínguez">
+<meta name="author" content="Ricardo Martínez Domínguez">
 
 <style>
-html{scroll-behavior:smooth;}
+:root{
+  --rojo:#b60000;
+  --rojo-oscuro:#8f0000;
+  --rojo-suave:rgba(182,0,0,.07);
+  --blanco:rgba(255,255,255,.90);
+  --texto:#242424;
+  --gris:#666;
+  --sombra:0 12px 35px rgba(0,0,0,.10);
+}
+
+/* FÁCIL DE MODIFICAR:
+Nombre: Ricardo Martínez Domínguez
+Ciudad: Requena
+Provincia: Valencia
+Teléfono WhatsApp: 34605125721
+Email: ricardomartinezseguros@gmail.com
+Instagram: @ricardomartinezseguros
+*/
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   margin:0;
-  font-family:Arial,sans-serif;
-  background:linear-gradient(135deg,rgba(196,0,0,.10),rgba(255,255,255,.92));
-  color:#2b2b2b;
+  font-family:Georgia, "Times New Roman", serif;
+  background:
+    radial-gradient(circle at top left, rgba(182,0,0,.13), transparent 30%),
+    linear-gradient(135deg,rgba(196,0,0,.08),rgba(255,255,255,.96));
+  color:var(--texto);
+  line-height:1.6;
 }
+
 header{
-  background:#b60000;
+  background:linear-gradient(135deg,var(--rojo),#7d0000);
   color:white;
   text-align:center;
-  padding:45px 20px;
+  padding:50px 20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.18);
 }
-header h1{margin:0;font-size:36px;}
-header p{letter-spacing:2px;margin-top:8px;font-size:16px;}
-.hero{text-align:center;padding:45px 20px 25px;}
+
+header h1{
+  margin:0;
+  font-size:38px;
+  letter-spacing:1px;
+}
+
+header p{
+  letter-spacing:3px;
+  margin-top:10px;
+  font-size:15px;
+  text-transform:uppercase;
+}
+
+.hero{
+  text-align:center;
+  padding:50px 20px 30px;
+}
+
 .hero img.foto-perfil{
-  width:240px;height:340px;object-fit:cover;object-position:center top;
-  border-radius:50% / 35%;border:5px solid #b60000;
-  box-shadow:0 8px 24px rgba(0,0,0,.18);background:white;
+  width:240px;
+  height:340px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:50% / 35%;
+  border:5px solid var(--rojo);
+  box-shadow:var(--sombra);
+  background:white;
+  transition:transform .35s ease, box-shadow .35s ease;
 }
+
+.hero img.foto-perfil:hover{
+  transform:translateY(-4px);
+  box-shadow:0 18px 45px rgba(0,0,0,.16);
+}
+
 .hero h2{
-  color:#b60000;font-size:30px;max-width:900px;
-  margin:28px auto 10px;line-height:1.2;
+  color:var(--rojo);
+  font-size:31px;
+  max-width:950px;
+  margin:30px auto 12px;
+  line-height:1.25;
 }
-.hero p{font-size:18px;}
-.logo-occident{text-align:center;margin:25px auto 10px;}
-.logo-occident img{width:280px;max-width:80%;height:auto;display:block;margin:0 auto;}
-.container{max-width:950px;margin:auto;padding:25px;}
+
+.hero p{
+  font-size:18px;
+  color:#333;
+}
+
+.logo-occident{
+  text-align:center;
+  margin:28px auto 10px;
+}
+
+.logo-occident img{
+  width:300px;
+  max-width:80%;
+  height:auto;
+  display:block;
+  margin:0 auto;
+  transition:transform .3s ease;
+}
+
+.logo-occident img:hover{
+  transform:scale(1.03);
+}
+
+.container{
+  max-width:980px;
+  margin:auto;
+  padding:25px;
+}
+
 .card{
-  background:rgba(255,255,255,.86);border-radius:18px;padding:30px;
-  margin-bottom:25px;box-shadow:0 8px 25px rgba(0,0,0,.08);
+  background:var(--blanco);
+  border-radius:20px;
+  padding:32px;
+  margin-bottom:28px;
+  box-shadow:var(--sombra);
+  backdrop-filter:blur(6px);
+  transition:transform .3s ease, box-shadow .3s ease;
 }
-.card h2{text-align:center;margin-top:0;}
-h2,h3{color:#b60000;}
-label{font-weight:bold;margin-top:12px;display:block;}
+
+.card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 40px rgba(0,0,0,.12);
+}
+
+.card h2{
+  text-align:center;
+  margin-top:0;
+}
+
+h2,h3{
+  color:var(--rojo);
+}
+
+p{
+  font-size:16px;
+}
+
+label{
+  font-weight:bold;
+  margin-top:12px;
+  display:block;
+}
+
 input,select,textarea{
-  width:100%;padding:13px;margin-top:6px;margin-bottom:12px;
-  border:1px solid #ccc;border-radius:8px;font-size:15px;box-sizing:border-box;
+  width:100%;
+  padding:14px;
+  margin-top:6px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:15px;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+  transition:border .2s ease, box-shadow .2s ease;
 }
-textarea{min-height:110px;}
+
+input:focus,select:focus,textarea:focus{
+  outline:none;
+  border-color:var(--rojo);
+  box-shadow:0 0 0 3px rgba(182,0,0,.12);
+}
+
+textarea{
+  min-height:115px;
+}
+
 .btn{
-  background:#b60000;color:white;border:none;padding:15px 22px;
-  border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold;
+  background:var(--rojo);
+  color:white;
+  border:none;
+  padding:15px 24px;
+  border-radius:10px;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:bold;
+  transition:background .25s ease, transform .25s ease, box-shadow .25s ease;
 }
-.btn:hover{background:#8f0000;}
+
+.btn:hover{
+  background:var(--rojo-oscuro);
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(182,0,0,.25);
+}
+
 .btn-call{
-  display:inline-block;background:#222;color:white;text-decoration:none;
-  padding:15px 22px;border-radius:8px;font-weight:bold;margin-left:10px;
+  display:inline-block;
+  background:#222;
+  color:white;
+  text-decoration:none;
+  padding:15px 24px;
+  border-radius:10px;
+  font-weight:bold;
+  margin-left:10px;
+  transition:background .25s ease, transform .25s ease;
 }
+
+.btn-call:hover{
+  background:#000;
+  transform:translateY(-2px);
+}
+
 .testimonio{
-  margin-bottom:25px;padding:20px;background:rgba(196,0,0,.06);
-  border-left:5px solid #b60000;border-radius:12px;
+  margin-bottom:25px;
+  padding:20px;
+  background:var(--rojo-suave);
+  border-left:5px solid var(--rojo);
+  border-radius:14px;
+  transition:transform .25s ease, background .25s ease;
 }
-.estrellas{color:#b60000;font-size:20px;}
+
+.testimonio:hover{
+  transform:translateX(4px);
+  background:rgba(182,0,0,.10);
+}
+
+.estrellas{
+  color:var(--rojo);
+  font-size:20px;
+}
+
 .campo-condicional{
-  background:rgba(196,0,0,.04);padding:15px;border-radius:12px;
-  margin:10px 0 15px;border:1px solid rgba(182,0,0,.15);
+  background:rgba(196,0,0,.045);
+  padding:15px;
+  border-radius:12px;
+  margin:10px 0 15px;
+  border:1px solid rgba(182,0,0,.15);
 }
+
 .legal{
   background:rgba(0,0,0,.035);
   padding:15px;
@@ -71,28 +250,81 @@ textarea{min-height:110px;}
   margin:15px 0;
   font-size:14px;
 }
+
 .legal label{
   display:flex;
   gap:10px;
   align-items:flex-start;
   font-weight:normal;
 }
+
 .legal input{
   width:auto;
   margin-top:2px;
 }
-.whatsapp-float{
-  position:fixed;right:20px;bottom:20px;background:#25D366;color:white;
-  text-decoration:none;padding:14px 20px;border-radius:30px;font-weight:bold;
-  box-shadow:0 6px 16px rgba(0,0,0,.25);z-index:999;
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  text-align:left;
 }
-footer{background:#b60000;color:white;text-align:center;padding:22px;}
+
+footer{
+  background:linear-gradient(135deg,var(--rojo),#790000);
+  color:white;
+  padding:35px 25px;
+}
+
+footer a{
+  color:white;
+  text-decoration:none;
+}
+
+footer a:hover{
+  text-decoration:underline;
+}
+
+.footer-bottom{
+  text-align:center;
+  margin-top:25px;
+  font-size:13px;
+  opacity:.9;
+}
+
+.legal-text{
+  font-size:13px;
+  color:#f5f5f5;
+  opacity:.95;
+}
+
+.whatsapp-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  padding:14px 20px;
+  border-radius:30px;
+  font-weight:bold;
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
+  z-index:999;
+  font-family:Arial,sans-serif;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.whatsapp-float:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,.28);
+}
+
 @media(max-width:600px){
   header h1{font-size:27px;}
   .hero h2{font-size:24px;}
   .hero img.foto-perfil{width:210px;height:300px;}
   .container{padding:15px;}
-  .logo-occident img{width:230px;}
+  .logo-occident img{width:240px;}
   .btn-call{margin-left:0;margin-top:10px;}
 }
 </style>
@@ -102,14 +334,14 @@ footer{background:#b60000;color:white;text-align:center;padding:22px;}
 
 <header>
   <h1>RICARDO MARTÍNEZ DOMÍNGUEZ</h1>
-  <p>AGENTE DE SEGUROS</p>
+  <p>Agente de seguros en Requena, Valencia</p>
 </header>
 
 <section class="hero">
-  <img class="foto-perfil" src="foto.jpg" alt="Ricardo Martínez Domínguez">
+  <img class="foto-perfil" src="foto.jpg" alt="Ricardo Martínez Domínguez, agente de seguros en Requena Valencia">
 
   <h2>Revisamos tus seguros y los adaptamos en precio y coberturas a tus necesidades sin compromiso</h2>
-  <p>Estudio personalizado, trato directo y respuesta rápida por WhatsApp.</p>
+  <p>Seguros de auto, hogar, vida, salud, negocio e inversiones en Requena y Valencia.</p>
 
   <div style="margin-top:20px;">
     <a href="#formulario-cotizacion"><button class="btn">Enviar datos para cotizar seguro</button></a>
@@ -126,9 +358,8 @@ footer{background:#b60000;color:white;text-align:center;padding:22px;}
   <div class="card">
     <h2>Quién soy</h2>
     <p>
-      Soy Ricardo Martínez Domínguez, agente de seguros. Mi trabajo es revisar tus pólizas,
-      analizar tus necesidades reales y ayudarte a encontrar una solución equilibrada en precio,
-      coberturas y tranquilidad.
+      Soy Ricardo Martínez Domínguez, agente de seguros en Requena, Valencia. Mi trabajo es revisar tus pólizas,
+      analizar tus necesidades reales y ayudarte a encontrar una solución equilibrada en precio, coberturas y tranquilidad.
     </p>
   </div>
 
@@ -216,7 +447,35 @@ footer{background:#b60000;color:white;text-align:center;padding:22px;}
 </div>
 
 <footer>
-  <p>© Ricardo Martínez Domínguez - Agente de Seguros</p>
+  <div class="footer-grid">
+    <div>
+      <h3 style="color:white;">Ricardo Martínez Domínguez</h3>
+      <p>Agente de seguros en Requena, Valencia.</p>
+      <p>Dirección: Requena, Valencia</p>
+    </div>
+
+    <div>
+      <h3 style="color:white;">Contacto</h3>
+      <p>Teléfono: <a href="tel:+34605125721">605 125 721</a></p>
+      <p>Email: <a href="mailto:ricardomartinezseguros@gmail.com">ricardomartinezseguros@gmail.com</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/ricardomartinezseguros" target="_blank">@ricardomartinezseguros</a></p>
+    </div>
+
+    <div>
+      <h3 style="color:white;">Aviso legal y privacidad</h3>
+      <p class="legal-text">
+        Los datos enviados mediante esta web serán utilizados únicamente para contactar contigo y preparar una propuesta personalizada de seguros.
+        No se venderán ni cederán datos a terceros salvo obligación legal o necesidad para la gestión solicitada.
+      </p>
+      <p class="legal-text">
+        Puedes solicitar información, modificación o eliminación de tus datos escribiendo a ricardomartinezseguros@gmail.com.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © Ricardo Martínez Domínguez - Seguros en Requena y Valencia
+  </div>
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/34605125721" target="_blank">WhatsApp Directo</a>
