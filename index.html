@@ -11,176 +11,89 @@ body{
   background:linear-gradient(135deg,rgba(196,0,0,.10),rgba(255,255,255,.92));
   color:#2b2b2b;
 }
-
+html{scroll-behavior:smooth;}
 header{
   background:#b60000;
   color:white;
   text-align:center;
   padding:45px 20px;
 }
-
-header h1{
-  margin:0;
-  font-size:36px;
-}
-
-header p{
-  letter-spacing:2px;
-  margin-top:8px;
-  font-size:16px;
-}
-
-.hero{
-  text-align:center;
-  padding:45px 20px 25px;
-}
-
+header h1{margin:0;font-size:36px;}
+header p{letter-spacing:2px;margin-top:8px;font-size:16px;}
+.hero{text-align:center;padding:45px 20px 25px;}
 .hero img.foto-perfil{
-  width:240px;
-  height:340px;
-  object-fit:cover;
-  object-position:center top;
-  border-radius:50% / 35%;
-  border:5px solid #b60000;
-  box-shadow:0 8px 24px rgba(0,0,0,.18);
-  background:white;
+  width:240px;height:340px;object-fit:cover;object-position:center top;
+  border-radius:50% / 35%;border:5px solid #b60000;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);background:white;
 }
-
 .hero h2{
-  color:#b60000;
-  font-size:30px;
-  max-width:900px;
-  margin:28px auto 10px;
-  line-height:1.2;
+  color:#b60000;font-size:30px;max-width:900px;
+  margin:28px auto 10px;line-height:1.2;
 }
-
-.hero p{
-  font-size:18px;
-}
-
-.logo-occident{
-  text-align:center;
-  margin:25px auto 10px;
-}
-
-.logo-occident img{
-  width:280px;
-  max-width:80%;
-  height:auto;
-  display:block;
-  margin:0 auto;
-}
-
-.container{
-  max-width:950px;
-  margin:auto;
-  padding:25px;
-}
-
+.hero p{font-size:18px;}
+.logo-occident{text-align:center;margin:25px auto 10px;}
+.logo-occident img{width:280px;max-width:80%;height:auto;display:block;margin:0 auto;}
+.container{max-width:950px;margin:auto;padding:25px;}
 .card{
-  background:rgba(255,255,255,.86);
-  border-radius:18px;
-  padding:30px;
-  margin-bottom:25px;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  background:rgba(255,255,255,.86);border-radius:18px;padding:30px;
+  margin-bottom:25px;box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
-
-.card h2{
-  text-align:center;
-  margin-top:0;
-}
-
-h2,h3{
-  color:#b60000;
-}
-
-label{
-  font-weight:bold;
-  margin-top:12px;
-  display:block;
-}
-
+.card h2{text-align:center;margin-top:0;}
+h2,h3{color:#b60000;}
+label{font-weight:bold;margin-top:12px;display:block;}
 input,select,textarea{
-  width:100%;
-  padding:13px;
-  margin-top:6px;
-  margin-bottom:12px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:15px;
-  box-sizing:border-box;
+  width:100%;padding:13px;margin-top:6px;margin-bottom:12px;
+  border:1px solid #ccc;border-radius:8px;font-size:15px;box-sizing:border-box;
 }
-
-textarea{
-  min-height:110px;
-}
-
+textarea{min-height:110px;}
 .btn{
-  background:#b60000;
-  color:white;
-  border:none;
-  padding:15px 22px;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:16px;
-  font-weight:bold;
+  background:#b60000;color:white;border:none;padding:15px 22px;
+  border-radius:8px;cursor:pointer;font-size:16px;font-weight:bold;
 }
-
-.btn:hover{
-  background:#8f0000;
+.btn:hover{background:#8f0000;}
+.btn-call{
+  display:inline-block;background:#222;color:white;text-decoration:none;
+  padding:15px 22px;border-radius:8px;font-weight:bold;margin-left:10px;
 }
-
 .testimonio{
-  margin-bottom:25px;
-  padding:20px;
-  background:rgba(196,0,0,.06);
-  border-left:5px solid #b60000;
-  border-radius:12px;
+  margin-bottom:25px;padding:20px;background:rgba(196,0,0,.06);
+  border-left:5px solid #b60000;border-radius:12px;
 }
-
-.estrellas{
-  color:#b60000;
-  font-size:20px;
-}
-
+.estrellas{color:#b60000;font-size:20px;}
 .campo-condicional{
-  background:rgba(196,0,0,.04);
+  background:rgba(196,0,0,.04);padding:15px;border-radius:12px;
+  margin:10px 0 15px;border:1px solid rgba(182,0,0,.15);
+}
+.legal{
+  background:rgba(0,0,0,.035);
   padding:15px;
-  border-radius:12px;
-  margin:10px 0 15px;
-  border:1px solid rgba(182,0,0,.15);
+  border-radius:10px;
+  margin:15px 0;
+  font-size:14px;
 }
-
+.legal label{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  font-weight:normal;
+}
+.legal input{
+  width:auto;
+  margin-top:2px;
+}
 .whatsapp-float{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
-  padding:14px 20px;
-  border-radius:30px;
-  font-weight:bold;
-  box-shadow:0 6px 16px rgba(0,0,0,.25);
-  z-index:999;
+  position:fixed;right:20px;bottom:20px;background:#25D366;color:white;
+  text-decoration:none;padding:14px 20px;border-radius:30px;font-weight:bold;
+  box-shadow:0 6px 16px rgba(0,0,0,.25);z-index:999;
 }
-
-footer{
-  background:#b60000;
-  color:white;
-  text-align:center;
-  padding:22px;
-}
-
+footer{background:#b60000;color:white;text-align:center;padding:22px;}
 @media(max-width:600px){
   header h1{font-size:27px;}
   .hero h2{font-size:24px;}
-  .hero img.foto-perfil{
-    width:210px;
-    height:300px;
-  }
+  .hero img.foto-perfil{width:210px;height:300px;}
   .container{padding:15px;}
   .logo-occident img{width:230px;}
+  .btn-call{margin-left:0;margin-top:10px;}
 }
 </style>
 </head>
@@ -194,9 +107,13 @@ footer{
 
 <section class="hero">
   <img class="foto-perfil" src="foto.jpg" alt="Ricardo Martínez Domínguez">
-
   <h2>Revisamos tus seguros y los adaptamos en precio y coberturas a tus necesidades sin compromiso</h2>
   <p>Estudio personalizado, trato directo y respuesta rápida por WhatsApp.</p>
+
+  <div style="margin-top:20px;">
+    <a href="#formulario-rapido"><button class="btn">Pedir revisión gratuita</button></a>
+    <a class="btn-call" href="tel:+34605125721">Llamar ahora</a>
+  </div>
 
   <div class="logo-occident">
     <img src="occident.png" alt="Occident Seguros">
@@ -204,6 +121,40 @@ footer{
 </section>
 
 <div class="container">
+
+  <div class="card" id="formulario-rapido">
+    <h2>Consulta rápida</h2>
+    <p style="text-align:center;">Déjame tus datos básicos y te contacto por WhatsApp.</p>
+
+    <form id="formRapido" onsubmit="enviarWhatsAppRapido(event)">
+      <label>Nombre y apellidos</label>
+      <input name="Nombre y apellidos" required>
+
+      <label>Teléfono</label>
+      <input name="Teléfono" placeholder="+34 000 111 222" required>
+
+      <label>Tipo de seguro</label>
+      <select name="Tipo de seguro" required>
+        <option value="">Seleccione...</option>
+        <option>Auto</option>
+        <option>Hogar</option>
+        <option>Vida</option>
+        <option>Salud</option>
+        <option>Negocio</option>
+        <option>Inversiones</option>
+        <option>Otro</option>
+      </select>
+
+      <div class="legal">
+        <label>
+          <input type="checkbox" id="legalRapido" required>
+          <span>Acepto la política de privacidad y autorizo el uso de mis datos para recibir una propuesta personalizada.</span>
+        </label>
+      </div>
+
+      <button class="btn" type="submit">Enviar consulta rápida</button>
+    </form>
+  </div>
 
   <div class="card">
     <h2>Quién soy</h2>
@@ -216,54 +167,20 @@ footer{
 
   <div class="card">
     <h2>Cómo trabajo</h2>
-
-    <div class="testimonio">
-      <strong>1. Me envías tus datos</strong>
-      <p>Rellenas el formulario con la información básica sobre el seguro que necesitas.</p>
-    </div>
-
-    <div class="testimonio">
-      <strong>2. Analizo tu situación</strong>
-      <p>Reviso tus necesidades, coberturas actuales y posibles mejoras.</p>
-    </div>
-
-    <div class="testimonio">
-      <strong>3. Comparo opciones</strong>
-      <p>Busco alternativas para encontrar una solución equilibrada en precio y cobertura.</p>
-    </div>
-
-    <div class="testimonio">
-      <strong>4. Recibes una propuesta personalizada</strong>
-      <p>Te contacto directamente por WhatsApp con una propuesta adaptada y sin compromiso.</p>
-    </div>
-
+    <div class="testimonio"><strong>1. Me envías tus datos</strong><p>Rellenas el formulario con la información básica sobre el seguro que necesitas.</p></div>
+    <div class="testimonio"><strong>2. Analizo tu situación</strong><p>Reviso tus necesidades, coberturas actuales y posibles mejoras.</p></div>
+    <div class="testimonio"><strong>3. Comparo opciones</strong><p>Busco alternativas para encontrar una solución equilibrada en precio y cobertura.</p></div>
+    <div class="testimonio"><strong>4. Recibes una propuesta personalizada</strong><p>Te contacto directamente por WhatsApp con una propuesta adaptada y sin compromiso.</p></div>
     <div style="text-align:center;margin-top:30px;">
-      <a href="#formulario-cotizacion">
-        <button class="btn">Enviar datos para cotizar seguro</button>
-      </a>
+      <a href="#formulario-cotizacion"><button class="btn">Enviar datos para cotizar seguro</button></a>
     </div>
   </div>
 
   <div class="card">
     <h2>Opiniones de clientes</h2>
-
-    <div class="testimonio">
-      <div class="estrellas">★★★★★</div>
-      <p>“Me revisó todos los seguros y terminé pagando menos teniendo mejores coberturas.”</p>
-      <strong>— Javier M.</strong>
-    </div>
-
-    <div class="testimonio">
-      <div class="estrellas">★★★★★</div>
-      <p>“Atención rápida, clara y por WhatsApp. Muy cómodo y sin vueltas.”</p>
-      <strong>— Laura G.</strong>
-    </div>
-
-    <div class="testimonio">
-      <div class="estrellas">★★★★★</div>
-      <p>“Me explicó todo sin prisas y encontré un seguro mucho más adaptado a mi situación.”</p>
-      <strong>— Carlos R.</strong>
-    </div>
+    <div class="testimonio"><div class="estrellas">★★★★★</div><p>“Me revisó todos los seguros y terminé pagando menos teniendo mejores coberturas.”</p><strong>— Javier M.</strong></div>
+    <div class="testimonio"><div class="estrellas">★★★★★</div><p>“Atención rápida, clara y por WhatsApp. Muy cómodo y sin vueltas.”</p><strong>— Laura G.</strong></div>
+    <div class="testimonio"><div class="estrellas">★★★★★</div><p>“Me explicó todo sin prisas y encontré un seguro mucho más adaptado a mi situación.”</p><strong>— Carlos R.</strong></div>
   </div>
 
   <div class="card" id="formulario-cotizacion">
@@ -283,6 +200,14 @@ footer{
 
     <form id="formSeguro" onsubmit="enviarWhatsApp(event)">
       <div id="camposFormulario"></div>
+
+      <div class="legal">
+        <label>
+          <input type="checkbox" id="legalCompleto" required>
+          <span>Acepto la política de privacidad y autorizo el uso de mis datos para recibir una propuesta personalizada.</span>
+        </label>
+      </div>
+
       <button class="btn" type="submit">Enviar por WhatsApp</button>
     </form>
   </div>
@@ -330,140 +255,59 @@ auto: personalesConCif + `
 <label>Fecha de nacimiento del conductor habitual</label><input name="Fecha nacimiento conductor habitual" type="date">
 <label>Fecha primera expedición del permiso de conducir</label><input name="Fecha primera expedición permiso" type="date">
 <label>Tipo del carnet</label>
-<select name="Tipo del carnet">
-<option>Seleccione...</option>
-<option>B</option>
-<option>A</option>
-<option>A1</option>
-<option>A2</option>
-<option>C</option>
-<option>D</option>
-</select>
-
+<select name="Tipo del carnet"><option>Seleccione...</option><option>B</option><option>A</option><option>A1</option><option>A2</option><option>C</option><option>D</option></select>
 <label>¿El vehículo ya tiene seguro?</label>
 <select name="¿El vehículo ya tiene seguro?" id="vehiculoTieneSeguro" onchange="mostrarDatosPolizaAuto()">
-<option value="">Selecciona una opción</option>
-<option value="Sí">Sí</option>
-<option value="No">No</option>
+<option value="">Selecciona una opción</option><option value="Sí">Sí</option><option value="No">No</option>
 </select>
-
 <div id="datosPolizaAuto"></div>
-
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
-
 hogar: personalesBase + `
 <h3>Datos de la vivienda</h3>
 <label>Dirección completa</label><input name="Dirección completa" placeholder="Calle, nº, piso...">
 <label>Código Postal de la vivienda</label><input name="Código Postal vivienda" placeholder="28001">
 <label>Tipo de vivienda</label><input name="Tipo de vivienda" placeholder="Piso, chalet...">
 <label>Uso del inmueble</label>
-<select name="Uso del inmueble">
-<option>Selecciona una opción</option>
-<option>Vivienda habitual</option>
-<option>Segunda vivienda</option>
-<option>Alquiler</option>
-<option>Local</option>
-</select>
+<select name="Uso del inmueble"><option>Selecciona una opción</option><option>Vivienda habitual</option><option>Segunda vivienda</option><option>Alquiler</option><option>Local</option></select>
 <label>¿Ya tiene seguro contratado?</label>
-<select name="¿Ya tiene seguro contratado?">
-<option>Selecciona</option>
-<option>Sí</option>
-<option>No</option>
-</select>
+<select name="¿Ya tiene seguro contratado?"><option>Selecciona</option><option>Sí</option><option>No</option></select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
-
 vida: personalesBase + `
 <h3>Datos para vida</h3>
 <label>Capital que desea asegurar (€)</label><input name="Capital que desea asegurar" placeholder="100000">
-<label>Fumador</label>
-<select name="Fumador">
-<option>Selecciona</option>
-<option>Sí</option>
-<option>No</option>
-</select>
-<label>¿Ya tiene seguro contratado?</label>
-<select name="¿Ya tiene seguro contratado?">
-<option>Selecciona</option>
-<option>Sí</option>
-<option>No</option>
-</select>
+<label>Fumador</label><select name="Fumador"><option>Selecciona</option><option>Sí</option><option>No</option></select>
+<label>¿Ya tiene seguro contratado?</label><select name="¿Ya tiene seguro contratado?"><option>Selecciona</option><option>Sí</option><option>No</option></select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
-
 salud: personalesConCif + `
 <h3>Datos para salud</h3>
 <label>Nº de personas a asegurar</label>
-<select name="Nº de personas a asegurar">
-<option>Selecciona</option>
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
-<option>5 o más</option>
-</select>
-<label>¿Ya tiene seguro contratado?</label>
-<select name="¿Ya tiene seguro contratado?">
-<option>Selecciona</option>
-<option>Sí</option>
-<option>No</option>
-</select>
+<select name="Nº de personas a asegurar"><option>Selecciona</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5 o más</option></select>
+<label>¿Ya tiene seguro contratado?</label><select name="¿Ya tiene seguro contratado?"><option>Selecciona</option><option>Sí</option><option>No</option></select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
-
 negocio: personalesConCif + `
 <h3>Datos de la empresa</h3>
 <label>Actividad del negocio</label><input name="Actividad del negocio" placeholder="Peluquería, clínica, carpintería...">
 <label>Dirección del negocio</label><input name="Dirección del negocio" placeholder="Calle, nº, piso...">
-<label>Propiedad del local</label>
-<select name="Propiedad del local">
-<option>Selecciona una opción</option>
-<option>Propio</option>
-<option>Alquilado</option>
-</select>
-<label>Uso del local</label>
-<select name="Uso del local">
-<option>Selecciona una opción</option>
-<option>Comercial</option>
-<option>Oficina</option>
-<option>Almacén</option>
-<option>Industrial</option>
-</select>
+<label>Propiedad del local</label><select name="Propiedad del local"><option>Selecciona una opción</option><option>Propio</option><option>Alquilado</option></select>
+<label>Uso del local</label><select name="Uso del local"><option>Selecciona una opción</option><option>Comercial</option><option>Oficina</option><option>Almacén</option><option>Industrial</option></select>
 <label>Valor aproximado del contenido (€)</label><input name="Valor aproximado del contenido" placeholder="Ej. 15000">
-<label>¿Ya tiene seguro contratado?</label>
-<select name="¿Ya tiene seguro contratado?">
-<option>Selecciona</option>
-<option>Sí</option>
-<option>No</option>
-</select>
+<label>¿Ya tiene seguro contratado?</label><select name="¿Ya tiene seguro contratado?"><option>Selecciona</option><option>Sí</option><option>No</option></select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
-
 inversiones: personalesBase + `
 <h3>Datos sobre inversiones</h3>
 <label>¿Qué tipo de inversión te interesa?</label>
-<select name="Tipo de inversión">
-<option>Selecciona una opción</option>
-<option>Ahorro periódico</option>
-<option>Inversión a largo plazo</option>
-<option>Plan de jubilación</option>
-<option>No lo sé, quiero asesoramiento</option>
-</select>
+<select name="Tipo de inversión"><option>Selecciona una opción</option><option>Ahorro periódico</option><option>Inversión a largo plazo</option><option>Plan de jubilación</option><option>No lo sé, quiero asesoramiento</option></select>
 <label>Capital aproximado que deseas invertir al mes (€)</label><input name="Capital mensual" placeholder="Ej: 10000">
 <label>Horizonte temporal años</label><input name="Horizonte temporal" placeholder="Ej: 10">
 <label>Objetivo del Ahorro</label>
-<select name="Objetivo del ahorro">
-<option>Selecciona una opción</option>
-<option>Jubilación</option>
-<option>Comprar vivienda</option>
-<option>Crear patrimonio</option>
-<option>Estudios hijos</option>
-<option>Otro</option>
-</select>
+<select name="Objetivo del ahorro"><option>Selecciona una opción</option><option>Jubilación</option><option>Comprar vivienda</option><option>Crear patrimonio</option><option>Estudios hijos</option><option>Otro</option></select>
 <label>Cuéntanos qué necesitas</label><textarea name="Cuéntanos qué necesitas"></textarea>
 `,
-
 otros: personalesBase + `
 <h3>Detalles del seguro</h3>
 <label>Describe brevemente</label><input name="Describe brevemente" placeholder="Seguro de viaje, mascota, etc.">
@@ -479,13 +323,11 @@ function mostrarFormulario(){
 function mostrarDatosPolizaAuto(){
   const valor = document.getElementById("vehiculoTieneSeguro").value;
   const contenedor = document.getElementById("datosPolizaAuto");
-
   if(valor === "Sí"){
     contenedor.innerHTML = `
       <div class="campo-condicional">
         <label>Compañía actual</label>
         <input name="Compañía actual" placeholder="Ej: Occident, Mapfre, AXA...">
-
         <label>Número de póliza</label>
         <input name="Número de póliza" placeholder="Ej: 123456789">
       </div>
@@ -495,27 +337,33 @@ function mostrarDatosPolizaAuto(){
   }
 }
 
-function enviarWhatsApp(event){
+function enviarWhatsAppRapido(event){
   event.preventDefault();
-
-  const tipo = document.getElementById("tipoSeguro").value;
-
-  if(!tipo){
-    alert("Selecciona primero un tipo de seguro.");
-    return;
-  }
-
-  const campos = document.querySelectorAll("#formSeguro input, #formSeguro select, #formSeguro textarea");
-
-  let texto = "Hola Ricardo, quiero solicitar información.%0A";
-  texto += "Tipo de solicitud: " + document.getElementById("tipoSeguro").selectedOptions[0].text + "%0A%0A";
-
+  const campos = document.querySelectorAll("#formRapido input, #formRapido select");
+  let texto = "Hola Ricardo, quiero una revisión rápida de seguro.%0A%0A";
   campos.forEach(campo => {
     if(campo.name && campo.value){
       texto += campo.name + ": " + campo.value + "%0A";
     }
   });
+  window.open("https://wa.me/" + WHATSAPP + "?text=" + texto, "_blank");
+}
 
+function enviarWhatsApp(event){
+  event.preventDefault();
+  const tipo = document.getElementById("tipoSeguro").value;
+  if(!tipo){
+    alert("Selecciona primero un tipo de seguro.");
+    return;
+  }
+  const campos = document.querySelectorAll("#formSeguro input, #formSeguro select, #formSeguro textarea");
+  let texto = "Hola Ricardo, quiero solicitar información.%0A";
+  texto += "Tipo de solicitud: " + document.getElementById("tipoSeguro").selectedOptions[0].text + "%0A%0A";
+  campos.forEach(campo => {
+    if(campo.name && campo.value && campo.type !== "checkbox"){
+      texto += campo.name + ": " + campo.value + "%0A";
+    }
+  });
   window.open("https://wa.me/" + WHATSAPP + "?text=" + texto, "_blank");
 }
 </script>
